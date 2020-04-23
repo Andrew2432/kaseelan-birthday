@@ -18,7 +18,7 @@ function loadQuiz() {
   quizzes.forEach((quiz) => {
     output += `
     <div id="quiz-div-${quiz.id}">
-        <p>${quiz.question}</p> <br />
+        <p>${quiz.id}. ${quiz.question}</p>
         <input type="radio" name="quiz-${quiz.id}" value="${quiz.answers[0]}"/>${quiz.answers[0]} <br />
         <input type="radio" name="quiz-${quiz.id}" value="${quiz.answers[1]}"/>${quiz.answers[1]} <br />
         <input type="radio" name="quiz-${quiz.id}" value="${quiz.answers[2]}"/>${quiz.answers[2]} <br />
@@ -46,4 +46,3 @@ function getSelectedOption(name) {
   }
   return options_value;
 }
-loadQuiz();
