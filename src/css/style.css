@@ -8,6 +8,8 @@ body {
   background-color: #000;
   color: #fff;
   font-family: 'Courgette', cursive;
+  scroll-behavior: smooth;
+  scrollbar-color: transparent;
 }
 
 header {
@@ -41,6 +43,20 @@ header {
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: flex-start;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #quiz {
